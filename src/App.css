@@ -30,3 +30,11 @@ height: 10px;
 background-color: blue;
 border-radius: 50%;
 }
+
+@media (max-width: 767px),
+       (hover: none) and (pointer: coarse) {
+  .cursor-circle-outer,
+  .cursor-circle-inner {
+    display: none !important;
+  }
+}
