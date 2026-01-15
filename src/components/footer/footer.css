@@ -100,6 +100,7 @@
         font-size: 29px;
     }
     .footer-bottom {
-        padding: 15px 10px 0;
+        padding: 18px 10px;
+        font-size: 12px;
     }
 }
