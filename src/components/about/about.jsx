@@ -1,6 +1,7 @@
 import React, {forwardRef} from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import './about.css'
+import systemImage from "../../assets/images/system/system.jpg"
 
 const About = forwardRef ((_, ref) => {
     return (
@@ -47,7 +48,7 @@ const About = forwardRef ((_, ref) => {
                 </div>
             </div>
             <div className="about-right">
-                <img className="about-img" src="src/assets/images/system/system.jpg" />
+                <img className="about-img" src={systemImage} />
             </div>
         </div>
     )
