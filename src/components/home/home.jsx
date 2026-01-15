@@ -1,16 +1,70 @@
 
-import React, { forwardRef } from "react";
+import React, { useRef, useState, useEffect, forwardRef } from "react";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import "./home.css";
 import myImage from "../../assets/images/my-image/hafeez.png"
 
 const Home = forwardRef((__, ref) => {
+    const cardRef = useRef(null);
+    const [isDown, setIsDown] = useState(false);
+    const [inside, setInside] = useState(false);
+
+    const titles = ["Front-End Developer", "Web Developer", "UI/UX Developer"];
+    const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+    const [displayedText, setDisplayedText] = useState("");
+    const [typing, setTyping] = useState(true);
+
+    useEffect(() => {
+        let timeout;
+
+        if (typing) {
+            if (displayedText.length < titles[currentTitleIndex].length) {
+                timeout = setTimeout(() => {
+                    setDisplayedText(
+                        titles[currentTitleIndex].slice(0, displayedText.length + 1)
+                    );
+                }, 150);
+            } else {
+                timeout = setTimeout(() => setTyping(false), 1000);
+            }
+        } else {
+            if (displayedText.length > 0) {
+                timeout = setTimeout(() => {
+                    setDisplayedText(displayedText.slice(0, -1));
+                }, 50); 
+            } else {
+                setTyping(true);
+                setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+            }
+        }
+
+        return () => clearTimeout(timeout);
+    }, [displayedText, typing, currentTitleIndex]);
+
+    const updateRotation = (x, y, down = isDown) => {
+        if (!inside) return;
+
+        const card = cardRef.current;
+        const rect = card.getBoundingClientRect();
+        const nx = ((x - rect.left) / rect.width - 0.5) * 2;
+        const ny = ((y - rect.top) / rect.height - 0.5) * 2;
+
+        const maxAngle = 50;
+        const rx = -ny * maxAngle;
+        const ry = nx * maxAngle;
+
+        card.style.transform = `scale(${down ? 0.6 : 1}) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    };
+
     return (
         <div ref={ref} className="home-section">
             <div className="home-text">
                 <h1>Hi, I'm Hafeez Ahamed</h1>
 
-                <h2 className="animated-title">Front-End Developer</h2>
+                <h2 className="animated-title">
+                    {displayedText}
+                    <span className="cursor">|</span>
+                </h2>
 
                 <p>
                     I am a Entry-Level Front-End Developer with hands-on exprience <strong>HTML5, CSS3, JavaScript, React.js, and Bootstrap</strong>.
@@ -39,7 +93,27 @@ const Home = forwardRef((__, ref) => {
                 </div>
             </div>
 
-            <div className="my-image card">
+            <div
+                className="my-image card"
+                ref={cardRef}
+                onMouseMove={(e) => {
+                    setInside(true);
+                    updateRotation(e.clientX, e.clientY);
+                }}
+                onMouseLeave={() => {
+                    setInside(false);
+                    setIsDown(false);
+                    cardRef.current.style.transform = "scale(1) rotateX(0deg) rotateY(0deg)";
+                }}
+                onPointerDown={(e) => {
+                    setIsDown(true);
+                    updateRotation(e.clientX, e.clientY, true);
+                }}
+                onPointerUp={(e) => {
+                    setIsDown(false);
+                    updateRotation(e.clientX, e.clientY, false);
+                }}
+            >
                 <img src={myImage} alt="Hafeez Ahamed" />
             </div>
         </div>
