@@ -78,7 +78,7 @@
 
     .skills-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        row-gap: 20px;
     }
 
     .skills-item {

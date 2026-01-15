@@ -83,7 +83,6 @@
 
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 45px;
     }
 
     .skills-section h1 {
