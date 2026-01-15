@@ -1,0 +1,165 @@
+.home-section {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.977);
+  color: white;
+  padding: 150px 25px 110px;
+}
+
+.home-text {
+  width: 45%;
+  padding: 10px 0;
+}
+
+.home-text h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.home-text h2 {
+  font-size: 50px;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+.home-text p {
+  font-size: 20px;
+  line-height: 33px;
+}
+
+.social-line {
+  width: 50px;
+  height: 2px;
+  background: white;
+  display: inline-block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  text-align: center;
+  border: 2px solid white;
+  padding: 8px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:nth-child(2) {
+  width: 36px;
+  height: 35px;
+  font-size: 15px;
+  padding: 7px;
+}
+
+.social-icons a:nth-child(3) {
+  width: 45px;
+  height: 44px;
+  font-size: 22px;
+}
+
+.social-icons a:nth-child(4) {
+  width: 45px;
+  height: 44px;
+  font-size: 22px;
+}
+
+.social-icons a:nth-child(5) {
+  width: 36px;
+  height: 34px;
+  font-size: 15px;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-4px);
+}
+
+
+.my-image {
+  width: 54%;
+  display: flex;
+  justify-content: flex-end;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.my-image img {
+  width: 420px;
+  height: 445px;
+  border-radius: 20px;
+  transform: translateZ(40px);
+  pointer-events: none;
+}
+
+
+.cursor-circle-outer,
+.cursor-circle-inner {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+
+.cursor-circle-outer {
+  width: 30px;
+  height: 30px;
+  border: 2px solid blue;
+  border-radius: 50%;
+}
+
+
+.cursor-circle-inner {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .home-section {
+    flex-direction: column;
+    padding: 130px 20px 80px;
+  }
+
+  .home-text,
+  .my-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .my-image {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .home-text h1 {
+    font-size: 32px;
+  }
+
+  .home-text h2 {
+    font-size: 22px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .my-image img {
+    width: 300px;
+    height: auto;
+  }
+}
