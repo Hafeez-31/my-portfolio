@@ -58,7 +58,7 @@
     width: 70px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .skils-title {
         padding: 90px 15px;
     }
