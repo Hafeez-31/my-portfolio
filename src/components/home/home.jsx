@@ -2,6 +2,7 @@
 import React, { forwardRef } from "react";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import "./home.css";
+import myImage from "../../assets/images/my-image/hafeez.png"
 
 const Home = forwardRef((__, ref) => {
     return (
@@ -39,7 +40,7 @@ const Home = forwardRef((__, ref) => {
             </div>
 
             <div className="my-image card">
-                <img src="src/components/home/hafeez.png" alt="Hafeez Ahamed" />
+                <img src={myImage} alt="Hafeez Ahamed" />
             </div>
         </div>
     );

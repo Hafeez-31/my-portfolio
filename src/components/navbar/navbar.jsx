@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./navbar.css";
+import navLogo from "../../assets/images/nav-icon/portfolio.png"
 
 const Navbar = ({ scrollTo, refs }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = ({ scrollTo, refs }) => {
   return (
     <div className="header">
       <nav className="navbar">
-        <img src="src/components/navbar/image/portfolio.png" alt="Portfolio" title="Portfolio" />
+        <img src={navLogo} alt="Portfolio" title="Portfolio" />
 
         <ul className={`nav-menu ${menuOpen ? "show" : ""}`}>
           <li className="nav-item" onClick={() => scrollToSection("home")}>

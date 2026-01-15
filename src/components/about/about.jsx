@@ -47,7 +47,7 @@ const About = forwardRef ((_, ref) => {
                 </div>
             </div>
             <div className="about-right">
-                <img className="about-img" src="src/components/about/system.jpg" />
+                <img className="about-img" src="src/assets/images/system/system.jpg" />
             </div>
         </div>
     )

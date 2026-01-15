@@ -1,5 +1,17 @@
 import React from "react";
 import './skills.css'
+import htmlLogo from "../../assets/images/skills-icons/html-logo.png"
+import cssLogo from "../../assets/images/skills-icons/css-logo.png"
+import jsLogo from "../../assets/images/skills-icons/js-logo.png"
+import reactLogo from "../../assets/images/skills-icons/reactjs-logo.png"
+import bootstrapLogo from "../../assets/images/skills-icons/bootstrap-logo.png"
+import javaLogo from "../../assets/images/skills-icons/java-logo.png"
+import mysqlLogo from "../../assets/images/skills-icons/mysql-logo.png"
+import githubLogo from "../../assets/images/skills-icons/github-logo.png"
+import canvaLogo from "../../assets/images/skills-icons/canva-logo.jpeg"
+import mswordLogo from "../../assets/images/skills-icons/msword-logo.png"
+import powerpointLogo from "../../assets/images/skills-icons/powerpoint-logo.png"
+import msexcelLogo from "../../assets/images/skills-icons/msexcel-logo.png"
 
 const Skills = () => {
     return (
@@ -12,62 +24,62 @@ const Skills = () => {
 
                 <div className="skills-container">
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/html-logo.png" />
+                        <img src={htmlLogo} />
                         <h3>HTML 5</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/css-logo.png" />
+                        <img src={cssLogo} />
                         <h3>CSS 3</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/js-logo.png" />
+                        <img src={jsLogo} />
                         <h3>JAVASCRIPT</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/reactjs-logo.png" />
+                        <img src={reactLogo} />
                         <h3>REACT JS</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/Bootstrap-logo.png" />
+                        <img src={bootstrapLogo} />
                         <h3>BOOTSTRAP</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/java-logo.png" />
+                        <img src={javaLogo} />
                         <h3>JAVA</h3>
                         <p>Years of Experience: <strong>Beginner</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/mysql-logo.png" />
+                        <img src={mysqlLogo} />
                         <h3>MY SQL</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/github-logo.png" />
+                        <img src={githubLogo} />
                         <h3>GIT HUB</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/canva-logo.jpeg" />
+                        <img src={canvaLogo} />
                         <h3>CANVA</h3>
                         <p>Years of Experience: <strong>Beginner</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/msword-logo.png" />
+                        <img src={mswordLogo} />
                         <h3>MS WORD</h3>
                         <p>Years of Experience: <strong>1+</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/powerpoint-logo.png" />
+                        <img src={powerpointLogo} />
                         <h3>POWER POINT</h3>
                         <p>Years of Experience: <strong>Intermediate</strong></p>
                     </div>
                     <div className="skills-card">
-                        <img src="src/components/skills-preview/images/msexcel-logo.png" />
+                        <img src={msexcelLogo} />
                         <h3>MS EXCEL</h3>
                         <p>Years of Experience: <strong>1+</strong></p>
                     </div>
