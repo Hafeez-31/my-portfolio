@@ -175,7 +175,7 @@
     }
 
     .about-btn {
-        margin: 20px auto 0;
+        margin: 10px 116px;
         font-size: 14px;
         padding: 10px 12px;
     }
@@ -212,4 +212,11 @@
         font-size: 15px;
         line-height: 23px;
     }
+
+    .about-img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
 }

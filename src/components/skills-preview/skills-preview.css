@@ -1,5 +1,5 @@
 .skills-section {
-    padding: 50px 23px 60px;
+    padding: 50px 22px 60px;
     background: black;
     color: white;
 }
@@ -15,8 +15,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1220px;
 }
 
 
@@ -79,21 +78,25 @@
 
 @media (max-width: 480px) {
     .skills-section {
-        padding: 40px 15px;
+        padding: 40px 17px;
     }
 
     .skills-container {
-
         grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
     }
 
     .skills-section h1 {
-        font-size: 28px;
+        font-size: 35px;
         margin-bottom: 35px;
     }
 
     .skills-card {
         text-align: center;
+    }
+
+    .skills-card p {
+        font-size: 12px;
     }
 
     .skills-card img {

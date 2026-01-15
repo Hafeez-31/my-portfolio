@@ -28,7 +28,6 @@
 .footer-menu li {
     font-size: 16px;
     cursor: pointer;
-    opacity: 0.9;
 }
 
 .footer-menu a {
@@ -93,12 +92,12 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .footer-menu {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+    .footer-menu {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
-  .footer-name {
-    font-size: 29px;
-  }
+    .footer-name {
+        font-size: 29px;
+    }
 }

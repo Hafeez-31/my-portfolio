@@ -154,15 +154,35 @@
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .contact-section {
+    padding: 13px;
+  }
+
+  .contact-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 45px;
+  }
+
+  .contact-form {
+    padding: 18px;
+    border-radius: none;
+  }
+
   .contact-card {
     grid-template-columns: 1fr;
+    padding: ;
   }
 
   .row {
     grid-template-columns: 1fr;
   }
 
+  .field.phone input {
+    width: 100%;
+  }
+
   .contact-info {
-    padding: 30px;
+    padding: 18px;
   }
 }
