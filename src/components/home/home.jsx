@@ -31,7 +31,7 @@ const Home = forwardRef((__, ref) => {
             if (displayedText.length > 0) {
                 timeout = setTimeout(() => {
                     setDisplayedText(displayedText.slice(0, -1));
-                }, 50); 
+                }, 50);
             } else {
                 setTyping(true);
                 setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
@@ -41,6 +41,18 @@ const Home = forwardRef((__, ref) => {
         return () => clearTimeout(timeout);
     }, [displayedText, typing, currentTitleIndex]);
 
+    useEffect(() => {
+        const touch = window.matchMedia(
+            "(hover: none) and (pointer: coarse)"
+        ).matches;
+
+        setIsTouch(touch);
+
+        // Mobile-la transform reset
+        if (touch && cardRef.current) {
+            cardRef.current.style.transform = "none";
+        }
+    }, []);
     const updateRotation = (x, y, down = isDown) => {
         if (!inside) return;
 
