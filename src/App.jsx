@@ -33,8 +33,6 @@ const App = () => {
         <Route path="/skills" element={<Skills />} />
       </Routes>
       <Footer />
-      <div className="cursor-circle-outer" ref={outerRef}></div>
-      <div className="cursor-circle-inner" ref={innerRef}></div>
     </div>
   )
 }
