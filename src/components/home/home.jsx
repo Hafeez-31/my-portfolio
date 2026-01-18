@@ -8,6 +8,7 @@ const Home = forwardRef((__, ref) => {
     const cardRef = useRef(null);
     const [isDown, setIsDown] = useState(false);
     const [inside, setInside] = useState(false);
+    const [isTouch, setIsTouch] = useState(false);
 
     const titles = ["Front-End Developer", "Web Developer", "UI/UX Developer"];
     const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -42,14 +43,14 @@ const Home = forwardRef((__, ref) => {
     }, [displayedText, typing, currentTitleIndex]);
 
     useEffect(() => {
-        const touch = window.matchMedia(
+        const isTouch = window.matchMedia(
             "(hover: none) and (pointer: coarse)"
         ).matches;
 
-        setIsTouch(touch);
+        setIsTouch(isTouch);
 
         // Mobile-la transform reset
-        if (touch && cardRef.current) {
+        if (isTouch && cardRef.current) {
             cardRef.current.style.transform = "none";
         }
     }, []);
@@ -108,6 +109,7 @@ const Home = forwardRef((__, ref) => {
             <div
                 className="my-image card"
                 ref={cardRef}
+                
                 onMouseMove={(e) => {
                     setInside(true);
                     updateRotation(e.clientX, e.clientY);
