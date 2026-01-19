@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>2026 All rights reserved | Designed and developed by <span>Hafeez Ahamed</span></p>
+                <p>&#169; 2026 All rights reserved | Designed and developed by <span>Hafeez Ahamed</span></p>
             </div>
         </footer>
     );

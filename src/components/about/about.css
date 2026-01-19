@@ -48,6 +48,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+.about-btn a {
+    color: black;
+}
+
 .about-btn .line {
     width: 25px;
     height: 2px;
@@ -58,8 +62,11 @@
 
 .about-btn:hover {
     background: black;
-    color: white;
     transform: scale(0.8);
+}
+
+.about-btn a:hover {
+    color: #fff;
 }
 
 .about-btn:hover .line {
@@ -151,8 +158,9 @@
     }
 
     .about-img {
-        height: auto;
-        max-width: 300px;
+        width: 100%;
+        max-width: 450px;
+        height: 590px;
     }
 
     .about-content {
@@ -175,9 +183,13 @@
     }
 
     .about-btn {
-        margin: 10px 116px;
-        font-size: 14px;
+        margin: 10px 145px;
+        font-size: 12px;
         padding: 10px 12px;
+    }
+
+    .about-btn a {
+        color: black;
     }
 
     .about-btn .line {
@@ -212,11 +224,4 @@
         font-size: 15px;
         line-height: 23px;
     }
-
-    .about-img {
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-    }
-
 }

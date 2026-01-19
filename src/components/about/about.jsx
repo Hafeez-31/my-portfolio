@@ -2,6 +2,7 @@ import React, {forwardRef} from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import './about.css'
 import systemImage from "../../assets/images/system/system.jpg"
+import myResume from "../../assets/My-resume/HafeezAhamed-Resume.pdf"
 
 const About = forwardRef ((_, ref) => {
     return (
@@ -20,7 +21,7 @@ const About = forwardRef ((_, ref) => {
                 </div>
                 <div className="about-btn">
                     <span className="line"></span>
-                    <span>DOWNLOAD CV</span>
+                    <a href={myResume}>DOWNLOAD CV</a>
                 </div>
                 <span className="hr-line"></span>
                 <div className="about-qualifications">

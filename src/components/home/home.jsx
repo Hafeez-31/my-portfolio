@@ -1,8 +1,7 @@
-
 import React, { useRef, useState, useEffect, forwardRef } from "react";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import "./home.css";
-import myImage from "../../assets/images/my-image/hafeez.png"
+import myImage from "../../assets/images/my-image/hafeez.png";
 
 const Home = forwardRef((__, ref) => {
     const cardRef = useRef(null);
@@ -43,21 +42,23 @@ const Home = forwardRef((__, ref) => {
     }, [displayedText, typing, currentTitleIndex]);
 
     useEffect(() => {
-        const isTouch = window.matchMedia(
+        const touch = window.matchMedia(
             "(hover: none) and (pointer: coarse)"
         ).matches;
 
-        setIsTouch(isTouch);
+        setIsTouch(touch);
 
-        // Mobile-la transform reset
-        if (isTouch && cardRef.current) {
-            cardRef.current.style.transform = "none";
+        if (touch && cardRef.current) {
+            cardRef.current.style.transform = "scale(1)";
         }
     }, []);
+
     const updateRotation = (x, y, down = isDown) => {
-        if (!inside) return;
+        if (isTouch) return;
 
         const card = cardRef.current;
+        if (!card) return;
+
         const rect = card.getBoundingClientRect();
         const nx = ((x - rect.left) / rect.width - 0.5) * 2;
         const ny = ((y - rect.top) / rect.height - 0.5) * 2;
@@ -66,7 +67,11 @@ const Home = forwardRef((__, ref) => {
         const rx = -ny * maxAngle;
         const ry = nx * maxAngle;
 
-        card.style.transform = `scale(${down ? 0.6 : 1}) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        card.style.transform = `
+            scale(${down ? 0.6 : 1})
+            rotateX(${rx}deg)
+            rotateY(${ry}deg)
+        `;
     };
 
     return (
@@ -80,13 +85,15 @@ const Home = forwardRef((__, ref) => {
                 </h2>
 
                 <p>
-                    I am a Entry-Level Front-End Developer with hands-on exprience <strong>HTML5, CSS3, JavaScript, React.js, and Bootstrap</strong>.
-                    I specialize in developing responsive, accessible, and visually refined web interfaces, ensuring
-                    consistent performance across all modern devices and browsers.
+                    I am a Entry-Level Front-End Developer with hands-on exprience{" "}
+                    <strong>HTML5, CSS3, JavaScript, React.js, and Bootstrap</strong>.
+                    I specialize in developing responsive, accessible, and visually
+                    refined web interfaces.
                 </p>
 
                 <div className="social-icons">
                     <span className="social-line"></span>
+
                     <a href="http://linkedin.com/in/hafeez-ahamed-69473427a" target="_blank" rel="noreferrer">
                         <FaLinkedin />
                     </a>
@@ -102,33 +109,40 @@ const Home = forwardRef((__, ref) => {
                     <a href="https://github.com/Hafeez-31/My-projects.git" target="_blank" rel="noreferrer">
                         <FaGithub />
                     </a>
+
                     <span className="social-line"></span>
                 </div>
             </div>
 
+            {/* ---------- IMAGE CARD ---------- */}
             <div
                 className="my-image card"
                 ref={cardRef}
-                
                 onMouseMove={(e) => {
+                    if (isTouch) return;
                     setInside(true);
                     updateRotation(e.clientX, e.clientY);
                 }}
                 onMouseLeave={() => {
                     setInside(false);
                     setIsDown(false);
-                    cardRef.current.style.transform = "scale(1) rotateX(0deg) rotateY(0deg)";
+                    if (cardRef.current) {
+                        cardRef.current.style.transform =
+                            "scale(1) rotateX(0deg) rotateY(0deg)";
+                    }
                 }}
                 onPointerDown={(e) => {
+                    if (isTouch) return;
                     setIsDown(true);
                     updateRotation(e.clientX, e.clientY, true);
                 }}
                 onPointerUp={(e) => {
+                    if (isTouch) return;
                     setIsDown(false);
                     updateRotation(e.clientX, e.clientY, false);
                 }}
             >
-                <img src={myImage} alt="Hafeez Ahamed" />
+                <img src={myImage} alt="Hafeez Ahamed" draggable={false} />
             </div>
         </div>
     );

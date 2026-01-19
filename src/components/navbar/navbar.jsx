@@ -28,7 +28,7 @@ const Navbar = ({ scrollTo, refs }) => {
   return (
     <div className="header">
       <nav className="navbar">
-        <img src={navLogo} alt="Portfolio" title="Portfolio" />
+       <Link to="/"><img src={navLogo} alt="Portfolio" title="Portfolio" /></Link> 
 
         <ul className={`nav-menu ${menuOpen ? "show" : ""}`}>
           <li className="nav-item" onClick={() => scrollToSection("home")}>
