@@ -182,19 +182,32 @@
         line-height: 26px;
     }
 
-    .about-btn {
-        margin: 10px 145px;
+    /* .about-btn {
+        display: block;        
+        margin: 10px auto;     
+        width: fit-content;   
         font-size: 12px;
         padding: 10px 12px;
+    } */
+
+    .about-btn {
+        margin: 10px 32%;      /* 👈 center */
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .about-btn .line {
+        width: 18px;
     }
 
     .about-btn a {
         color: black;
     }
 
-    .about-btn .line {
+    /* .about-btn .line {
+        display: inline-block;
         width: 18px;
-    }
+    } */
 
     .hr-line {
         width: 100%;
