@@ -181,17 +181,8 @@
         font-size: 16px;
         line-height: 26px;
     }
-
-    /* .about-btn {
-        display: block;        
-        margin: 10px auto;     
-        width: fit-content;   
-        font-size: 12px;
-        padding: 10px 12px;
-    } */
-
     .about-btn {
-        margin: 10px 32%;      /* 👈 center */
+        margin: 10px 31%;     
         font-size: 12px;
         padding: 10px 12px;
     }
@@ -203,11 +194,6 @@
     .about-btn a {
         color: black;
     }
-
-    /* .about-btn .line {
-        display: inline-block;
-        width: 18px;
-    } */
 
     .hr-line {
         width: 100%;

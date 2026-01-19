@@ -28,14 +28,11 @@ const App = () => {
   let innerX = null;
   let innerY = null;
 
-  
-
   useEffect(() => {
     const outer = outerRef.current;
     const inner = innerRef.current;
     const navbar = document.querySelector(".navbar");
 
-    // Start hidden
     outer.style.opacity = "0";
     inner.style.opacity = "0";
 
@@ -72,7 +69,6 @@ const App = () => {
       }
     };
 
-    // Check if mouse is over navbar
     const isHoveringNavbar = (e) => {
       if (!navbar) return false;
       const rect = navbar.getBoundingClientRect();
@@ -113,7 +109,7 @@ const App = () => {
     if (navbar) {
       navbar.addEventListener("mouseenter", hideCursor);
       navbar.addEventListener("mouseleave", () => {
-        // Show cursor only if mouse has already moved
+  
         if (cursorVisible) outer.style.opacity = "1";
         if (cursorVisible) inner.style.opacity = "1";
       });
@@ -151,7 +147,6 @@ const App = () => {
       }
     };
   }, []);
-  
 
   return (
     <div>
