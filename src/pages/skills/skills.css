@@ -28,13 +28,11 @@
     width: 100%;
     max-width: 1220px;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .skills-item {
     padding: 22px 25px;
-    width: 100%;
-    max-width: 289px;
-    height: auto;
     background-color: white;
     color: black;
     border: 2px solid white;
@@ -60,7 +58,7 @@
 
 @media screen and (max-width: 768px) {
     .skils-title {
-        padding: 90px 15px;
+        padding: 220px 0;
     }
 
     .skils-title h1 {
@@ -68,21 +66,22 @@
     }
 
     .skills-text {
-        padding: 25px 15px;
+        padding: 50px 15px;
     }
 
     .skills-text h1 {
         font-size: 28px;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
 
     .skills-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px;
+        gap: 25px;
+        margin: 0 auto;
     }
 
     .skills-item {
-        width: 100%;
+        padding: 18px 14px;
         text-align: center;
     }
 

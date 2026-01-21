@@ -16,15 +16,11 @@
     gap: 22px;
     width: 100%;
     max-width: 1220px;
+    margin: 0 auto;
 }
-
 
 .skills-card {
     padding: 22px 25px;
-    width: 100%;
-    max-width: 289px;
-    height: auto;
-    max-width: 100%;
     background-color: white;
     color: black;
     border: 2px solid white;
@@ -83,14 +79,17 @@
 
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 0 auto;
     }
 
     .skills-section h1 {
-        font-size: 35px;
+        font-size: 40px;
         margin-bottom: 35px;
     }
 
     .skills-card {
+        padding: 18px 14px;
         text-align: center;
     }
 
