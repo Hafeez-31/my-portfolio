@@ -4,6 +4,7 @@ import Navbar from './components/navbar/navbar'
 import Home from './components/home/home'
 import About from "./components/about/about";
 import Skillspreview from "./components/skills-preview/skillspreview";
+// import Projectspreview from "./components/projects-preview/Projects-preview";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import Skills from "./pages/skills/skills";
@@ -157,6 +158,7 @@ const App = () => {
             <Home ref = {homeRef}/>
             <About  ref = {aboutRef}/>
             <Skillspreview />
+            {/* <Projectspreview /> */}
             <Contact ref = {contactRef} />
           </>
         } />

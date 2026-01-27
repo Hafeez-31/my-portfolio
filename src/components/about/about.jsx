@@ -2,7 +2,7 @@ import React, {forwardRef} from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import './about.css'
 import systemImage from "../../assets/images/system/system.jpg"
-import myResume from "../../assets/My-resume/HafeezAhamed-Resume.pdf"
+import myResume from "../../assets/My-resume/HafeezAhamed_Resume.pdf"
 
 const About = forwardRef ((_, ref) => {
     return (

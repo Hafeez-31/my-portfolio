@@ -1,0 +1,54 @@
+.projects-section {
+    padding: 50px 30px;
+}
+
+.projects-section h1 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 40px;
+}
+.projects-grid {
+    display: flex;
+    gap: 20px;
+}
+.project-cards {
+    background-color: #fff;
+    border: 1px solid gray;
+}
+
+.project-cards img {
+    width: 410px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.project-cards h2 {
+    margin: 20px;
+}
+
+.projects-title {
+    font-size: 20px;
+    background-color: rgba(42, 78, 155, 0.823);
+    width: 120px;
+    padding: 10px 10px;
+    margin: 20px;
+}
+
+.projects-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects-link {
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.projects-type {
+    background-color: blueviolet;
+    padding: 10px 10px;
+    font-size: 17px;
+}
