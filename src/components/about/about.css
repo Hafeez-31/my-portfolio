@@ -65,7 +65,7 @@
     transform: scale(0.8);
 }
 
-.about-btn a:hover {
+.about-btn:hover a {
     color: #fff;
 }
 
@@ -117,12 +117,11 @@
 }
 
 .qualification-cards p {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.qualification-cards span {
-    font-weight: 700;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 15px;
+    line-height: 22px;
+    hyphens: auto;
 }
 
 .qualification-icon {

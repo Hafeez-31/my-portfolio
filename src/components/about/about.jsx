@@ -1,21 +1,22 @@
-import React, {forwardRef} from "react";
+import React, { forwardRef } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import './about.css'
 import systemImage from "../../assets/images/system/system.jpg"
 import myResume from "../../assets/My-resume/HafeezAhamed_Resume.pdf"
 
-const About = forwardRef ((_, ref) => {
+const About = forwardRef((_, ref) => {
     return (
         <div ref={ref} className="about-section">
             <div className="about-left">
                 <div className="about-content">
                     <h2>About Me</h2>
                     <span className="about-line"></span>
-                    <p>Enthusiastic and self-motivated Entry-Level Front-End Developer with a solid understanding of modern
-                        web technologies, including HTML, CSS, JavaScript, and React. Adept at creating clean, responsive, and
-                        user-friendly web interfaces. Passionate about continuous learning, problem-solving, and building
-                        accessible digital experiences. Seeking an opportunity to grow technical skills and contribute to a
-                        collaborative development team.
+                    <p>
+                        I am an entry-level Front-End Developer, Passed out in 2023, with a strong interest in building responsive and
+                        user-friendly web applications. I enjoy transforming ideas into clean and functional designs using modern
+                        web technologies. I have hands-on experience through personal and academic projects, focusing on HTML, CSS, JavaScript,
+                        Reac.js, Bootstarp, and modern frameworks. I am highly motivated to learn, grow, and contribute to real-world projects
+                        in a collaborative development environment.
                     </p>
 
                 </div>
@@ -34,17 +35,17 @@ const About = forwardRef ((_, ref) => {
                     </div>
                     <div className="qualification-cards">
                         <div className="qualification-header">
-                            <h3>QUALIFICATION</h3>
+                            <h3>CERTIFICATION</h3>
                             <FaGraduationCap className="qualification-icon" />
                         </div>
-                        <p>I have Graduated in <span>B.Sc</span> Computer Science on 2023 at University of Madras. And I have scored 85%</p>
+                        <p></p>
                     </div>
                     <div className="qualification-cards">
                         <div className="qualification-header">
-                            <h3>QUALIFICATION</h3>
+                            <h3>EXPERIENCE</h3>
                             <FaGraduationCap className="qualification-icon" />
                         </div>
-                        <p>I have Graduated in <span>B.Sc</span> Computer Science on 2023 at University of Madras. And I have scored 85%</p>
+                        <p>Ticketing Executive With 1+ years of experience. I am currently working in a non-IT role while actively transitioning into the IT field.</p>
                     </div>
                 </div>
             </div>

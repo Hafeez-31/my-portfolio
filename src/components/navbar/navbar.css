@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header {
@@ -14,7 +15,6 @@
     background: black;
     color: white;
     z-index: 1000;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navbar {

@@ -38,7 +38,7 @@ const Footer = () => {
                         <FaWhatsapp />
                     </a>
 
-                    <a href="https://github.com/Hafeez-31/My-projects.git" className="social-link github" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/Hafeez-31?tab=repositories" className="social-link github" target="_blank" rel="noreferrer">
                         <FaGithub />
                     </a>
                 </div>

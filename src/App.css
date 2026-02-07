@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 html, body {
@@ -7,33 +8,4 @@ html, body {
   overflow-x: hidden;
 }
 
-.cursor-circle-outer, .cursor-circle-inner {
-position: fixed;
-pointer-events: none;
-transform: translate(-50%, -50%);
-transition: opacity 0.2s;
-opacity: 0;
-}
 
-
-.cursor-circle-outer {
-width: 30px;
-height: 30px;
-border: 2px solid blue;
-border-radius: 50%;
-}
-
-
-.cursor-circle-inner {
-width: 10px;
-height: 10px;
-background-color: blue;
-border-radius: 50%;
-}
-
-@media (max-width: 767px) {
-  .cursor-circle-outer,
-  .cursor-circle-inner {
-    display: none !important;
-  }
-}

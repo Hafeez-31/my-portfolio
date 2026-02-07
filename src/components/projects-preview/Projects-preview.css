@@ -4,51 +4,111 @@
 
 .projects-section h1 {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     font-size: 40px;
 }
-.projects-grid {
-    display: flex;
-    gap: 20px;
-}
-.project-cards {
-    background-color: #fff;
-    border: 1px solid gray;
+
+.slider {
+    overflow: hidden;
+    width: 100%;
 }
 
+.slider:hover {}
+
+.projects-grid {
+    display: flex;
+    gap: 60px;
+    cursor: grab;
+}
+
+.projects-grid.animate {
+    transition: transform 3s ease-in-out;
+}
+
+.project-cards {
+    flex: 0 0 auto;
+    width: 360px;
+    border: 1px solid gray;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.project-cards:hover {
+    transform: scale(1.03);
+
+}
+
+
 .project-cards img {
-    width: 410px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .project-cards h2 {
-    margin: 20px;
+    margin: 15px;
 }
 
 .projects-title {
-    font-size: 20px;
-    background-color: rgba(42, 78, 155, 0.823);
-    width: 120px;
-    padding: 10px 10px;
-    margin: 20px;
+    display: flex;
+    gap: 8px;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-box {
+    background-color: rgba(42, 78, 155, 0.82);
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tech-text {
+    background-color: rgba(42, 78, 155, 0.82);
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .projects-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .projects-link {
-    color: black;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
+    color: black;
 }
 
 .projects-type {
     background-color: blueviolet;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.project-btn {
+    display: block;
+    background-color: #fff;
+    font-size: 18px;
+    color: black;
+    border: 2px solid black;
     padding: 10px 10px;
-    font-size: 17px;
+    margin: 35px auto 0;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-btn:hover {
+    background-color: black;
+    color: #fff;
+    transform: scale(0.8);
 }

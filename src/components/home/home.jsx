@@ -85,10 +85,9 @@ const Home = forwardRef((__, ref) => {
                 </h2>
 
                 <p>
-                    I am a Entry-Level Front-End Developer with hands-on exprience{" "}
-                    <strong>HTML5, CSS3, JavaScript, React.js, and Bootstrap</strong>.
-                    I specialize in developing responsive, accessible, and visually
-                    refined web interfaces.
+                    Entry-level Front-End Developer with strong hands-on experience in{""}<strong> HTML, CSS, JavaScript, React.js, and
+                    Bootstrap.</strong> Built responsive web applications and reusable UI components with a focus on performance
+                    and user experience.
                 </p>
 
                 <div className="social-icons">
@@ -106,7 +105,7 @@ const Home = forwardRef((__, ref) => {
                         <FaWhatsapp />
                     </a>
 
-                    <a href="https://github.com/Hafeez-31/My-projects.git" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/Hafeez-31?tab=repositories" target="_blank" rel="noreferrer">
                         <FaGithub />
                     </a>
 
