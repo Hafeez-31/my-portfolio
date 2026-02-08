@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './skills.css'
 import htmlLogo from "../../assets/images/skills-icons/html-logo.png"
 import cssLogo from "../../assets/images/skills-icons/css-logo.png"
@@ -14,6 +14,11 @@ import powerpointLogo from "../../assets/images/skills-icons/powerpoint-logo.png
 import msexcelLogo from "../../assets/images/skills-icons/msexcel-logo.png"
 
 const Skills = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
+    
     return (
         <div>
             <div className="skils-title">

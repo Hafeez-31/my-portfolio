@@ -1,28 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import "./footer.css";
 
-const Footer = () => {
-    const scrollToSection = (id) => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
+const Footer = ({ scrollTo, refs }) => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const scrollToSection = (section) => {
+        const doScroll = () => {
+            if (section === "home") scrollTo(refs.homeRef);
+            else if (section === "about") scrollTo(refs.aboutRef);
+            else if (section === "contact") scrollTo(refs.contactRef);
+        };
+
+        if (location.pathname === "/") {
+            doScroll();
+        } else {
+            navigate("/");
+            setTimeout(doScroll, 100);
         }
     };
+
+
     return (
         <footer className="footer">
             <div className="footer-main">
                 <h1 className="footer-name">Hafeez Ahamed. Z</h1>
 
                 <ul className="footer-menu">
-                    <li className="footer-item"><Link to="/">HOME</Link></li>
-                    <li className="footer-item" onClick={() => scrollToSection("about")}>
-                        ABOUT
-                    </li>
+                    <li className="footer-item" onClick={() => scrollToSection("home")}>HOME</li>
+                    <li className="footer-item" onClick={() => scrollToSection("about")}>ABOUT</li>
                     <li className="footer-item"><Link to="/skills">SKILLS</Link></li>
                     <li className="footer-item">PROJECTS</li>
-                    <li className="footer-item">CONTACT</li>
+                    <li className="footer-item" onClick={() => scrollToSection("contact")}>CONTACT</li>
                 </ul>
 
                 <div className="footer-socials">

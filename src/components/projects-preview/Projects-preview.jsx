@@ -1,18 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Projects-preview.css";
+
 import ToDo from "../../assets/images/projects/todo.png";
 import Calculator from "../../assets/images/projects/calculator.png";
 import ModernFurniture from "../../assets/images/projects/furniture.png";
-import BootsrapLily from "../../assets/images/projects/boostraplily.png"
+import BootsrapLily from "../../assets/images/projects/boostraplily.png";
+import Construct from "../../assets/images/projects/construct.png";
+import Crud from "../../assets/images/projects/crud.png";
+import Consuloan from "../../assets/images/projects/consuloan.png";
 
 const originalProjects = [
-    { img: ToDo, title: "ToDo List", tech: "REACT JS", link: "https://crudtodolist-application.netlify.app" },
+    { img: ToDo, title: "ToDo List", tech: ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"], link: "https://crudtodolist-application.netlify.app" },
     { img: Calculator, title: "Calculator", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/calculator" },
     { img: ModernFurniture, title: "Modern Furniture", tech: ["HTML", "CSS", "RESPONSIVE DESIGN"], link: "https://hafeez-31.github.io/furniture-website" },
     { img: BootsrapLily, title: "BootstrapLily", tech: ["HTML", "CSS", "UI/UX"], link: "https://hafeez-31.github.io/bootstraplily-website" },
-    { img: ToDo, title: "Construct", tech: "REACT JS", link: "https://primeconstruct-website.netlify.app/" },
-    { img: ToDo, title: "ToDo List", tech: "REACT JS", link: "https://crudtodolist-application.netlify.app" },
-    { img: ToDo, title: "ToDo List", tech: "REACT JS", link: "https://crudtodolist-application.netlify.app" },
+    { img: Construct, title: "Construct", tech: ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"], link: "https://primeconstruct-website.netlify.app/" },
+    { img: Crud, title: "ToDo List", tech: ["HTML", "CSS", "JS"], link: "https://hafeez-31.github.io/crud-application/" },
+    { img: Consuloan, title: "Consuloan", tech: ["HTML", "CSS", "BOOTSTRAP", "RESPONSIVE DESIGN"], link: "https://hafeez-31.github.io/consuloan-website/" },
 ];
 
 const visibleCards = 3;
@@ -28,11 +32,20 @@ const Projectspreview = () => {
     const gridRef = useRef(null);
     const intervalRef = useRef(null);
 
+    // ▶ start auto slide
     const startAutoSlide = () => {
         if (!intervalRef.current) {
             intervalRef.current = setInterval(() => {
                 setIndex((prev) => prev + 1);
             }, 4000);
+        }
+    };
+
+    // ⏸ stop auto slide
+    const stopAutoSlide = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
         }
     };
 
@@ -42,12 +55,11 @@ const Projectspreview = () => {
         requestAnimationFrame(() => setAnimate(true));
     }, []);
 
-    // start auto slide once
     useEffect(() => {
         startAutoSlide();
-        return () => clearInterval(intervalRef.current);
+        return () => stopAutoSlide();
     }, []);
-    // infinite loop reset (NO jump)
+
     useEffect(() => {
         const grid = gridRef.current;
 
@@ -62,7 +74,6 @@ const Projectspreview = () => {
         return () => grid.removeEventListener("transitionend", onTransitionEnd);
     }, [index]);
 
-    // turn animation back on
     useEffect(() => {
         if (!animate) {
             requestAnimationFrame(() => setAnimate(true));
@@ -80,25 +91,20 @@ const Projectspreview = () => {
                     style={{
                         transform: `translateX(-${index * (360 + 60)}px)`,
                     }}
+                    onMouseEnter={stopAutoSlide}
+                    onMouseLeave={startAutoSlide}
                 >
                     {projects.map((p, i) => (
-                        <div
-                            className="project-cards"
-                            key={i}
-                        >
+                        <div className="project-cards" key={i}>
                             <img src={p.img} alt={p.title} />
                             <h2>{p.title}</h2>
 
                             <div className="projects-title">
-                                {Array.isArray(p.tech) ? (
-                                    p.tech.map((t, idx) => (
-                                        <span key={idx} className="tech-box">
-                                            {t}
-                                        </span>
-                                    ))
-                                ) : (
-                                    <span className="tech-text">{p.tech}</span>
-                                )}
+                                {p.tech.map((t, idx) => (
+                                    <span key={idx} className="tech-box">
+                                        {t}
+                                    </span>
+                                ))}
                             </div>
 
                             <div className="projects-footer">
@@ -110,7 +116,9 @@ const Projectspreview = () => {
                                 >
                                     SEE PROJECT
                                 </a>
-                                <span className="projects-type">Personal Project</span>
+                                <span className="projects-type">
+                                    Personal Project
+                                </span>
                             </div>
                         </div>
                     ))}

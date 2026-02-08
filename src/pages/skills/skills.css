@@ -62,7 +62,8 @@
     }
 
     .skils-title h1 {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 32px;
     }
 
     .skills-text {
@@ -70,8 +71,9 @@
     }
 
     .skills-text h1 {
-        font-size: 28px;
-        margin-bottom: 40px;
+        font-size: 38px;
+        line-height: 30px;
+        margin-bottom: 45px;
     }
 
     .skills-wrapper {
@@ -83,6 +85,21 @@
     .skills-item {
         padding: 18px 14px;
         text-align: center;
+        transform: none;
+    }
+
+    .skills-item:hover {
+        transform: none;
+    }
+
+    .skills-item h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .skills-item p {
+        font-size: 15px;
+        line-height: 19px;
     }
 
     .skills-item img {

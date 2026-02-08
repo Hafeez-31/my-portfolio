@@ -121,7 +121,6 @@
 @media (pointer: coarse) {
   .my-image {
     transform: none !important;
-    cursor: none;
   }
 }
 
@@ -145,9 +144,13 @@
     font-size: 30px;
   }
 
+  .social-icons a {
+    transition: none;
+  }
+
   .social-icons a:hover {
-    background-color: initial;
-    color: white;
+    background-color: white;
+    color: black;
     transform: none;
   }
 
@@ -155,9 +158,13 @@
     justify-content: center;
     margin-top: 40px;
     margin-right: 0;
+    transition: none;
+    transform: none;
   }
 
   .my-image img {
     height: 450px;
+    transition: none;
+    transform: none;
   }
 }

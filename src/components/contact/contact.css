@@ -147,15 +147,15 @@
 }
 
 .socials a:hover {
-  background: #1f3db8;
+  background: black;
   color: #fff;
-  border-color: #1f3db8;
+  border-color: black;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .contact-section {
-    padding: 13px;
+    padding: 0 13px 50px;
   }
 
   .contact-title {

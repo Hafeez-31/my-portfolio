@@ -28,6 +28,7 @@
 }
 
 .about-content p {
+    text-align: justify;
     line-height: 28px;
     font-size: 17px;
     margin-bottom: 0px;
@@ -76,7 +77,7 @@
 
 
 .hr-line {
-    width: 740px;
+    width: 700px;
     display: block;
     margin: 35px 10px;
     height: 2px;
@@ -87,12 +88,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    padding: 20px 10px;
+    padding: 10px 10px;
+    margin-bottom: 30px;
 }
 
 .qualification-cards {
-    padding: 30px 20px;
-    height: 220px;
+    padding: 15px 12px;
     border: 1px solid rgba(0, 0, 0, 0.264);
     box-shadow:
         0 8px 30px rgba(20, 20, 19, 0.404),
@@ -108,7 +109,8 @@
 .qualification-header {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 50px;
     margin-bottom: 20px;
 }
 
@@ -120,7 +122,8 @@
     text-align: justify;
     text-justify: inter-word;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 25px;
+    margin-top: 5px;
     hyphens: auto;
 }
 
@@ -139,14 +142,14 @@
 .about-img {
     width: 100%;
     max-width: 450px;
-    height: 655px;
+    height: 690px;
 }
 
 @media (max-width: 768px) {
 
     .about-section {
         flex-direction: column;
-        padding: 30px 15px;
+        padding: 30px 20px;
     }
 
     .about-right,
@@ -159,7 +162,7 @@
     .about-img {
         width: 100%;
         max-width: 450px;
-        height: 590px;
+        height: 390px;
     }
 
     .about-content {
@@ -206,8 +209,8 @@
     }
 
     .qualification-cards {
-        height: auto;
-        padding: 25px 15px;
+        min-height: auto;
+        padding: 25px;
     }
 
     .qualification-header {
@@ -219,7 +222,24 @@
     }
 
     .qualification-cards p {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 23px;
+    }
+
+    .about-btn,
+    .about-btn .line,
+    .qualification-cards {
+        transition: none;
+    }
+
+    .about-btn:hover {
+        transform: none;
+    }
+
+    .qualification-cards:hover {
+        transform: none;
+        box-shadow:
+            0 8px 30px rgba(20, 20, 19, 0.404),
+            0 0 20px rgba(13, 13, 14, 0.047);
     }
 }

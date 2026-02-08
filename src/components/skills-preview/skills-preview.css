@@ -111,4 +111,23 @@
         padding: 8px 16px;
         margin-top: 45px;
     }
+
+    .skills-card,
+    .view-btn,
+    .btn {
+        transition: none;
+    }
+
+    .skills-card:hover {
+        transform: none;
+    }
+
+    .view-btn:hover {
+        transform: none;
+        background-color: white;
+    }
+
+    .view-btn:hover .btn {
+        color: black;
+    }
 }

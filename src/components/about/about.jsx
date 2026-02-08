@@ -5,6 +5,7 @@ import systemImage from "../../assets/images/system/system.jpg"
 import myResume from "../../assets/My-resume/HafeezAhamed_Resume.pdf"
 
 const About = forwardRef((_, ref) => {
+
     return (
         <div ref={ref} className="about-section">
             <div className="about-left">
@@ -31,14 +32,14 @@ const About = forwardRef((_, ref) => {
                             <h3>QUALIFICATION</h3>
                             <FaGraduationCap className="qualification-icon" />
                         </div>
-                        <p>I have Graduated in <span>B.Sc</span> Computer Science on 2023 at University of Madras. And I have scored 85%</p>
+                        <p>I have Graduated in <span>B.Sc</span> Computer Science on 2023 at University of Madras, and I have scored 85%</p>
                     </div>
                     <div className="qualification-cards">
                         <div className="qualification-header">
                             <h3>CERTIFICATION</h3>
                             <FaGraduationCap className="qualification-icon" />
                         </div>
-                        <p></p>
+                        <p>I have Learning FullStack Developer course at AJR Institute , and have completed Font End Developer part with hands-on project experience.</p>
                     </div>
                     <div className="qualification-cards">
                         <div className="qualification-header">

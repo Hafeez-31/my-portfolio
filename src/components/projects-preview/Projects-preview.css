@@ -13,8 +13,6 @@
     width: 100%;
 }
 
-.slider:hover {}
-
 .projects-grid {
     display: flex;
     gap: 60px;
@@ -38,7 +36,6 @@
 
 }
 
-
 .project-cards img {
     width: 100%;
     height: auto;
@@ -47,7 +44,8 @@
 }
 
 .project-cards h2 {
-    margin: 15px;
+    font-size: 28px;
+    margin: 20px;
 }
 
 .projects-title {
@@ -61,7 +59,7 @@
     background-color: rgba(42, 78, 155, 0.82);
     color: white;
     padding: 6px 10px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -111,4 +109,27 @@
     background-color: black;
     color: #fff;
     transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+    .project-cards {
+        transition: none;
+    }
+
+    .project-cards:hover {
+        transform: none;
+    }
+    .project-btn {
+        transition: none;
+    }
+
+    .project-btn:hover {
+        background-color: #fff;
+        color: black;
+        transform: none;
+    }
+
+    .projects-grid {
+        cursor: default;
+    }
 }

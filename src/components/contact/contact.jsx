@@ -50,7 +50,7 @@ const Contact = forwardRef((_, ref) => {
                             <p>Follow us on</p>
 
                             <div className="socials">
-                                <a href="http://linkedin.com/in/hafeez-ahamed-69473427a" target="_blank" rel="noreferrer">
+                                <a href="https://github.com/Hafeez-31?tab=repositories" target="_blank" rel="noreferrer">
                                     <FaGithub />
                                 </a>
 

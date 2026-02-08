@@ -86,7 +86,7 @@ const Home = forwardRef((__, ref) => {
 
                 <p>
                     Entry-level Front-End Developer with strong hands-on experience in{""}<strong> HTML, CSS, JavaScript, React.js, and
-                    Bootstrap.</strong> Built responsive web applications and reusable UI components with a focus on performance
+                        Bootstrap.</strong> Built responsive web applications and reusable UI components with a focus on performance
                     and user experience.
                 </p>
 
@@ -113,7 +113,6 @@ const Home = forwardRef((__, ref) => {
                 </div>
             </div>
 
-            {/* ---------- IMAGE CARD ---------- */}
             <div
                 className="my-image card"
                 ref={cardRef}

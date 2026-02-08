@@ -13,9 +13,6 @@ import Preloader from "./components/pre-loader/pre-loader";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  const outerRef = useRef(null);
-  const innerRef = useRef(null);
-
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
@@ -51,7 +48,7 @@ const App = () => {
         } />
         <Route path="/skills" element={<Skills />} />
       </Routes>
-      <Footer />
+      <Footer scrollTo={scrollTo} refs={{ homeRef, aboutRef, contactRef }}/>
     </div>
   )
 }
