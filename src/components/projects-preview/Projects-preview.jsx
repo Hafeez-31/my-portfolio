@@ -34,6 +34,8 @@ const Projectspreview = () => {
 
     // ▶ start auto slide
     const startAutoSlide = () => {
+        if (window.innerWidth <= 768) return;
+
         if (!intervalRef.current) {
             intervalRef.current = setInterval(() => {
                 setIndex((prev) => prev + 1);
@@ -89,7 +91,8 @@ const Projectspreview = () => {
                     ref={gridRef}
                     className={`projects-grid ${animate ? "animate" : ""}`}
                     style={{
-                        transform: `translateX(-${index * (360 + 60)}px)`,
+                        transform: `translateX(-${index * (window.innerWidth <= 768 ? (280 + 20) : (360 + 60))
+                            }px)`
                     }}
                     onMouseEnter={stopAutoSlide}
                     onMouseLeave={startAutoSlide}
