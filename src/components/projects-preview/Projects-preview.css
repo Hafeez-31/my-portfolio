@@ -1,194 +1,185 @@
 .projects-section {
-    padding: 50px 30px;
+  padding: 50px 30px;
 }
 
 .projects-section h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
 }
 
 .slider {
-    overflow: hidden;
-    width: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 .projects-grid {
-    display: flex;
-    gap: 60px;
-    cursor: grab;
+  display: flex;
+  gap: 60px;
+  cursor: grab;
 }
 
 .projects-grid.animate {
-    transition: transform 3s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 
 .project-cards {
-    flex: 0 0 auto;
-    width: 360px;
-    border: 1px solid gray;
-    background-color: #fff;
-    transition: all 0.3s ease;
+  flex: 0 0 auto;
+  width: 360px;
+  border: 1px solid gray;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
 .project-cards:hover {
-    transform: scale(1.03);
-
+  transform: scale(1.03);
 }
 
 .project-cards img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .project-cards h2 {
-    font-size: 28px;
-    margin: 20px;
+  font-size: 28px;
+  margin: 20px;
 }
 
 .projects-title {
-    display: flex;
-    gap: 8px;
-    margin: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 8px;
+  margin: 15px;
+  flex-wrap: wrap;
 }
 
 .tech-box {
-    background-color: rgba(42, 78, 155, 0.82);
-    color: white;
-    padding: 6px 10px;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.tech-text {
-    background-color: rgba(42, 78, 155, 0.82);
-    color: white;
-    padding: 6px 10px;
-    font-size: 12px;
-    font-weight: 600;
+  background-color: rgba(42, 78, 155, 0.82);
+  color: white;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .projects-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
 .projects-link {
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
 }
 
 .projects-type {
-    background-color: blueviolet;
-    padding: 8px;
-    font-size: 14px;
-    color: white;
+  background-color: blueviolet;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
 }
 
 .project-btn {
-    display: block;
-    background-color: #fff;
-    font-size: 18px;
-    color: black;
-    border: 2px solid black;
-    padding: 10px 10px;
-    margin: 35px auto 0;
-    text-align: center;
-    cursor: pointer;
-    width: fit-content;
-    transition: all 0.3s ease-in-out;
+  display: block;
+  background-color: #fff;
+  font-size: 18px;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 10px;
+  margin: 35px auto 0;
+  text-align: center;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
 }
 
 .project-btn:hover {
-    background-color: black;
-    color: #fff;
-    transform: scale(0.8);
+  background-color: black;
+  color: #fff;
+  transform: scale(0.8);
 }
 
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 30px 40px;
+  }
 
-    .projects-section {
-        padding: 30px 15px;
-    }
+  .projects-section h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
 
-    .projects-section h1 {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
+  
+  .slider {
+    padding: 10px;
+  }
+  
+  .projects-grid {
+    gap: 21px;
+    cursor: default;
+  }
 
-    .slider {
-        overflow-x: hidden;
-    }
+  .projects-grid.animate {
+    transition: transform 3s ease-in-out;
+  }
 
-    .projects-grid {
-        gap: 20px;              
-        cursor: default;        
-    }
+  .project-cards {
+    width: 100%;
+    max-width: 320px;
+    transition: none;
+  }
 
-    .projects-grid.animate {
-        transition: none;        
-    }
+  .project-cards:hover {
+    transform: none;
+  }
 
-    .project-cards {
-        width: 280px;           
-        transition: none;       
-    }
+  .project-cards img {
+    margin-bottom: 12px;
+  }
 
-    .project-cards:hover {
-        transform: none;
-    }
+  .project-cards h2 {
+    font-size: 20px;
+    margin: 12px;
+  }
 
-    .project-cards img {
-        margin-bottom: 12px;
-    }
+  .projects-title {
+    margin: 10px 12px;
+    gap: 6px;
+  }
 
-    .project-cards h2 {
-        font-size: 20px;
-        margin: 12px;
-    }
+  .tech-box {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
 
-    .projects-title {
-        margin: 10px 12px;
-        gap: 6px;
-    }
+  .projects-footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    text-align: center;
+  }
 
-    .tech-box,
-    .tech-text {
-        font-size: 11px;
-        padding: 5px 8px;
-    }
+  .projects-link {
+    font-size: 14px;
+  }
 
-    .projects-footer {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px;
-        text-align: center;
-    }
+  .projects-type {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 
-    .projects-link {
-        font-size: 14px;
-    }
+  .project-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: none;
+  }
 
-    .projects-type {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    .project-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-        transition: none;
-    }
-
-    .project-btn:hover {
-        background-color: #fff;
-        color: black;
-        transform: none;
-    }
+  .project-btn:hover {
+    background-color: #fff;
+    color: black;
+    transform: none;
+  }
 }
