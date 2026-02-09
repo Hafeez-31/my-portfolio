@@ -42,7 +42,7 @@ const App = () => {
             <Home ref={homeRef} />
             <About ref={aboutRef} />
             <Skillspreview />
-            <Projectspreview />
+            <Projectspreview /> 
             <Contact ref={contactRef} />
           </>
         } />

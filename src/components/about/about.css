@@ -77,7 +77,8 @@
 
 
 .hr-line {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     display: block;
     margin: 35px 10px;
     height: 2px;
@@ -183,8 +184,9 @@
         font-size: 16px;
         line-height: 26px;
     }
+
     .about-btn {
-        margin: 10px 31%;     
+        margin: 10px 31%;
         font-size: 10px;
         padding: 10px 12px;
     }
@@ -218,12 +220,16 @@
     }
 
     .qualification-header h3 {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .qualification-cards p {
-        font-size: 16px;
-        line-height: 23px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .qualification-icon {
+        font-size: 28px;
     }
 
     .about-btn,

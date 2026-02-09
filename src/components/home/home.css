@@ -45,6 +45,9 @@
 }
 
 .home-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
   font-size: 20px;
   line-height: 33px;
 }
@@ -141,7 +144,12 @@
   }
 
   .home-text h2 {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .home-text p {
+    font-size: 20px;
+    padding: 0 10px;
   }
 
   .social-icons a {

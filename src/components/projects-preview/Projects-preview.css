@@ -49,9 +49,10 @@
 
 .projects-title {
   display: flex;
+  align-items: center;
   gap: 8px;
   margin: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .tech-box {
@@ -129,6 +130,7 @@
   .project-cards {
     width: 100%;
     max-width: 320px;
+    padding: 0;
     transition: none;
   }
 
@@ -146,19 +148,20 @@
   }
 
   .projects-title {
-    margin: 10px 12px;
-    gap: 6px;
+    align-items: center;
+    margin: 15px 12px;
+    gap: 5px;
   }
 
   .tech-box {
-    font-size: 11px;
+    font-size: 10px;
     padding: 5px 8px;
   }
 
   .projects-footer {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
-    padding: 12px;
+    padding: 10px 12px;
     text-align: center;
   }
 
@@ -172,14 +175,14 @@
   }
 
   .project-btn {
-    font-size: 14px;
+    font-size: 18px;
     padding: 8px 16px;
     transition: none;
   }
 
   .project-btn:hover {
-    background-color: #fff;
-    color: black;
+    background-color: black;
+    color: #fff;
     transform: none;
   }
 }
