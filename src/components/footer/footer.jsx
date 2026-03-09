@@ -32,10 +32,10 @@ const Footer = ({ scrollTo, refs }) => {
                     <li className="footer-item" onClick={() => scrollToSection("home")}>HOME</li>
                     <li className="footer-item" onClick={() => scrollToSection("about")}>ABOUT</li>
                     <li className="footer-item"><Link to="/skills">SKILLS</Link></li>
-                    <li className="footer-item">PROJECTS</li>
+                    <li className="footer-item"><Link to="/projects">PROJECTS</Link></li>
                     <li className="footer-item" onClick={() => scrollToSection("contact")}>CONTACT</li>
                 </ul>
-
+                <span className="footer-line"></span>
                 <div className="footer-socials">
                     <a href="http://linkedin.com/in/hafeez-ahamed-69473427a" className="social-link linkedin" target="_blank" rel="noreferrer">
                         <FaLinkedin />
@@ -55,7 +55,7 @@ const Footer = ({ scrollTo, refs }) => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&#169; 2026 All rights reserved | Designed and developed by <span>Hafeez Ahamed</span></p>
+                <p>&#169; {new Date().getFullYear()} All rights reserved | Designed and developed by <span>Hafeez Ahamed</span></p>
             </div>
         </footer>
     );

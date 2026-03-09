@@ -8,6 +8,7 @@ import Projectspreview from "./components/projects-preview/Projects-preview";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import Skills from "./pages/skills/skills";
+import Projects from "./pages/projects/projects";
 import Preloader from "./components/pre-loader/pre-loader";
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
           </>
         } />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer scrollTo={scrollTo} refs={{ homeRef, aboutRef, contactRef }}/>
     </div>

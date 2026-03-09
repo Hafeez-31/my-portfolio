@@ -9,7 +9,7 @@ const Home = forwardRef((__, ref) => {
     const [inside, setInside] = useState(false);
     const [isTouch, setIsTouch] = useState(false);
 
-    const titles = ["Front-End Developer", "Web Developer", "UI/UX Developer"];
+    const titles = ["Front-End Developer", "Web UI Developer", "ReactJs Developer"];
     const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [typing, setTyping] = useState(true);
@@ -85,8 +85,8 @@ const Home = forwardRef((__, ref) => {
                 </h2>
 
                 <p>
-                    Entry-level Front-End Developer with strong hands-on experience in{""}<strong> HTML, CSS, JavaScript, React.js, and
-                        Bootstrap.</strong> Built responsive web applications and reusable UI components with a focus on performance
+                    Entry-level Front-End Developer with strong hands-on experience in{""}<strong> React.js, JavaScript, CSS, HTML, Bootstrap, SQL, and basic
+                    Core Java</strong> Built responsive web applications and reusable UI components with a focus on performance
                     and user experience.
                 </p>
 

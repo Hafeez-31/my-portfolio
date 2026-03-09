@@ -23,7 +23,7 @@
     justify-content: center;
     gap: 40px;
     padding: 0;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
 }
 
 .footer-menu li {
@@ -35,22 +35,27 @@
     color: white;
 }
 
+
+.footer-menu li:hover {
+    color: blue;
+}
+
+.footer-menu li a:hover {
+    color: blue;
+}
+
 .footer-item {
     cursor: pointer;
     font-size: 14px;
-    transition: all 0.3s ease;
 }
 
-.footer-item:hover {
-    transform: translateY(-5px);
+.footer-line{
+    display: block;
+    width:180px;
+    height:2px;
+    background:white;
+    margin:0 auto 35px;
 }
-
-/* .footer-line {
-    width: 350px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.6);
-    margin: 0 auto 40px;
-} */
 
 .footer-socials {
     display: flex;
@@ -79,7 +84,8 @@
 
 .footer-bottom {
     width: 100%;
-    background-color: rgba(8, 1, 1, 0.859);
+    background-color: black;
+    border-top: 1px solid #fff;
     color: white;
     text-align: center;
     font-size: 18px;

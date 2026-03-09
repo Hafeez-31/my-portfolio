@@ -1,8 +1,49 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import { FaGithub, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import './contact.css'
 
 const Contact = forwardRef((_, ref) => {
+
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const phoneNumber = "917339468772";
+
+        const text = `
+            New Protfolio Contact
+
+            Name: ${form.name}
+            Email: ${form.email}
+            Phone: ${form.phone}
+            Message: ${form.message}
+            `;
+
+        const encodedText = encodeURIComponent(text);
+
+        window.open(
+            `https://wa.me/${phoneNumber}?text=${encodedText}`,
+            "_blank"
+        );
+
+        setForm({
+            name: "",
+            email: "",
+            phone: "",
+            message: ""
+        });
+    };
+
     return (
         <div ref={ref} className="contact-section">
 
@@ -10,33 +51,33 @@ const Contact = forwardRef((_, ref) => {
             <div className="contact-wrapper">
                 <div className="contact-card">
 
-                    <div className="contact-form">
+                    <form className="contact-form" onSubmit={handleSubmit}>
                         <h2>Send us a message</h2>
 
                         <div className="row">
                             <div className="field">
                                 <label>Your name</label>
-                                <input type="text" placeholder="Enter your name" />
+                                <input type="text" name="name" value={form.name} placeholder="Enter your name" onChange={handleChange} required />
                             </div>
 
                             <div className="field">
                                 <label>Your email</label>
-                                <input type="email" placeholder="Enter your email" />
+                                <input type="email" name="email" value={form.email} placeholder="Enter your email" onChange={handleChange} required />
                             </div>
                         </div>
 
                         <div className="field phone">
                             <label>Phone number</label>
-                            <input type="text" placeholder="Enter phone number" />
+                            <input type="text" name="phone" value={form.phone} placeholder="Enter phone number" onChange={handleChange} required />
                         </div>
 
                         <div className="field">
                             <label>Message</label>
-                            <textarea rows="6" placeholder="Type your message"></textarea>
+                            <textarea rows="6" name="message" value={form.message} placeholder="Type your message" onChange={handleChange} required></textarea>
                         </div>
 
                         <button className="submit-btn">SUBMIT</button>
-                    </div>
+                    </form>
 
                     <div className="contact-info">
                         <h2>Contact info</h2>

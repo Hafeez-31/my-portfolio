@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./skills-preview.css"
 import htmlLogo from "../../assets/images/skills-icons/html-logo.png"
@@ -11,54 +11,78 @@ import mysqlLogo from "../../assets/images/skills-icons/mysql-logo.png"
 import githubLogo from "../../assets/images/skills-icons/github-logo.png"
 
 const Skillspreview = () => {
+
+    const [cardsVisible, setCardsVisible] = useState(false);
+    const [titleVisible, setTitleVisible] = useState(false);
+
+    const sectionRef = useRef(null);
+    const titleRef = useRef(null);
+
+    const skillsData = [
+        { img: htmlLogo, name: "HTML 5", level: "Intermediate" },
+        { img: cssLogo, name: "CSS 3", level: "Intermediate" },
+        { img: jsLogo, name: "JAVASCRIPT", level: "Intermediate" },
+        { img: reactLogo, name: "REACT JS", level: "Intermediate" },
+        { img: bootstrapLogo, name: "BOOTSTRAP", level: "Intermediate" },
+        { img: javaLogo, name: "JAVA", level: "Beginner" },
+        { img: mysqlLogo, name: "MY SQL", level: "Intermediate" },
+        { img: githubLogo, name: "GIT HUB", level: "Intermediate" }
+    ];
+
+    useEffect(() => {
+
+        const titleObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setTitleVisible(true);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        const sectionObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setCardsVisible(true);
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (titleRef.current) {
+            titleObserver.observe(titleRef.current);
+        }
+
+        if (sectionRef.current) {
+            sectionObserver.observe(sectionRef.current);
+        }
+
+        return () => {
+            titleObserver.disconnect();
+            sectionObserver.disconnect();
+        };
+
+    }, []);
+
     return (
-        <div className="skills-section">
-            <div className="skills-header">
-                <h1>Skills</h1>
+        <div className="skills-section" ref={sectionRef}>
+            <div className="skills-content">
+                <h1 ref={titleRef} className={`skills-title ${titleVisible ? "show" : ""}`}>Skills</h1>
+                <p ref={titleRef} className={`skills-title ${titleVisible ? "show" : ""}`}>A showcase of the technologies and tools I use in web development.</p>
             </div>
             <div className="skills-container">
-                <div className="skills-card">
-                    <img src={htmlLogo} />
-                    <h3>HTML 5</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={cssLogo} />
-                    <h3>CSS 3</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={jsLogo} />
-                    <h3>JAVASCRIPT</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={reactLogo} />
-                    <h3>REACT JS</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={bootstrapLogo} />
-                    <h3>BOOTSTRAP</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={javaLogo} />
-                    <h3>JAVA</h3>
-                    <p>Years of Experience: <strong>Beginner</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={mysqlLogo} />
-                    <h3>MY SQL</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
-                <div className="skills-card">
-                    <img src={githubLogo} />
-                    <h3>GIT HUB</h3>
-                    <p>Years of Experience: <strong>Intermediate</strong></p>
-                </div>
+                {skillsData.map((skill, index) => (
+                    <div key={index} className={`skills-card ${cardsVisible ? "show" : ""}`}>
+                        <img src={skill.img} alt={skill.name} />
+                        <h3>{skill.name}</h3>
+                        <p>
+                            Years of Experience: <strong>{skill.level}</strong>
+                        </p>
+                    </div>
+                ))}
             </div>
             <div className="view-btn">
+                <span className="line"></span>
                 <Link
                     className="btn"
                     to="/skills"

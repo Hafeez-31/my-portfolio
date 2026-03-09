@@ -18,76 +18,45 @@ const Skills = () => {
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, []);
-    
+
+    const skillsData = [
+        { img: htmlLogo, name: "HTML 5", level: "Intermediate" },
+        { img: cssLogo, name: "CSS 3", level: "Intermediate" },
+        { img: jsLogo, name: "JAVASCRIPT", level: "Intermediate" },
+        { img: reactLogo, name: "REACT JS", level: "Intermediate" },
+        { img: bootstrapLogo, name: "BOOTSTRAP", level: "Intermediate" },
+        { img: javaLogo, name: "JAVA", level: "Beginner" },
+        { img: mysqlLogo, name: "MY SQL", level: "Intermediate" },
+        { img: githubLogo, name: "GIT HUB", level: "Intermediate" },
+        { img: canvaLogo, name: "CANVA", level: "Beginner" },
+        { img: mswordLogo, name: "MS WORD", level: "1+" },
+        { img: powerpointLogo, name: "POWER POINT", level: "Intermediate" },
+        { img: msexcelLogo, name: "MS EXCEL", level: "1+" }
+    ];
+
     return (
         <div>
             <div className="skils-title">
                 <h1>Skills & Expertise</h1>
+                <p>Home / Skills</p>
             </div>
             <div className="skills-text">
-                <h1>Skills</h1>
+                <div className="skills-word">
+                    <h1>Skills</h1>
+                    <p>A showcase of the technologies and tools I use in web development.</p>
+                </div>
 
                 <div className="skills-wrapper">
-                    <div className="skills-item">
-                        <img src={htmlLogo} />
-                        <h3>HTML 5</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={cssLogo} />
-                        <h3>CSS 3</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={jsLogo} />
-                        <h3>JAVASCRIPT</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={reactLogo} />
-                        <h3>REACT JS</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={bootstrapLogo} />
-                        <h3>BOOTSTRAP</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={javaLogo} />
-                        <h3>JAVA</h3>
-                        <p>Years of Experience: <strong>Beginner</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={mysqlLogo} />
-                        <h3>MY SQL</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={githubLogo} />
-                        <h3>GIT HUB</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={canvaLogo} />
-                        <h3>CANVA</h3>
-                        <p>Years of Experience: <strong>Beginner</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={mswordLogo} />
-                        <h3>MS WORD</h3>
-                        <p>Years of Experience: <strong>1+</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={powerpointLogo} />
-                        <h3>POWER POINT</h3>
-                        <p>Years of Experience: <strong>Intermediate</strong></p>
-                    </div>
-                    <div className="skills-item">
-                        <img src={msexcelLogo} />
-                        <h3>MS EXCEL</h3>
-                        <p>Years of Experience: <strong>1+</strong></p>
-                    </div>
+
+                    {skillsData.map((skill, index) => (
+                        <div className="skills-item" key={index}>
+                            <img src={skill.img} alt={skill.name} />
+                            <h3>{skill.name}</h3>
+                            <p>
+                                Years of Experience: <strong>{skill.level}</strong>
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

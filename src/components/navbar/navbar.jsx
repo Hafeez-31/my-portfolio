@@ -28,7 +28,7 @@ const Navbar = ({ scrollTo, refs }) => {
   return (
     <div className="header">
       <nav className="navbar">
-       <Link to="/"><img src={navLogo} alt="Portfolio" title="Portfolio" /></Link> 
+        <Link to="/"><img src={navLogo} alt="Portfolio" title="Portfolio" /></Link>
 
         <ul className={`nav-menu ${menuOpen ? "show" : ""}`}>
           <li className="nav-item" onClick={() => scrollToSection("home")}>
@@ -43,7 +43,9 @@ const Navbar = ({ scrollTo, refs }) => {
             <Link to="/skills">SKILLS</Link>
           </li>
 
-          <li className="nav-item">PROJECTS</li>
+          <li className="nav-item">
+            <Link to="/projects">PROJECTS</Link>
+          </li>
 
           <li className="nav-item" onClick={() => scrollToSection("contact")}>
             CONTACT

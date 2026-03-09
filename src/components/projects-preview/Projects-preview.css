@@ -4,8 +4,25 @@
 
 .projects-section h1 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   font-size: 40px;
+}
+
+.projects-section p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.projects-title-main{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.8s ease;
+}
+
+.projects-title-main.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .slider {
@@ -37,9 +54,8 @@
 
 .project-cards img {
   width: 100%;
-  height: auto;
+  height: 210px;
   margin-bottom: 20px;
-  object-fit: cover;
 }
 
 .project-cards h2 {
@@ -84,7 +100,9 @@
 }
 
 .project-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   background-color: #fff;
   font-size: 18px;
   color: black;
@@ -99,8 +117,27 @@
 
 .project-btn:hover {
   background-color: black;
+  transform: scale(0.95);
+}
+
+.project-btn .line {
+    width: 25px;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+}
+
+.project-btn:hover .line {
+    width: 16px;
+    background: white;
+}
+
+.preview-btn {
+  color: black;
+}
+
+.project-btn:hover .preview-btn {
   color: #fff;
-  transform: scale(0.8);
 }
 
 @media (max-width: 768px) {
@@ -113,11 +150,11 @@
     margin-bottom: 25px;
   }
 
-  
+
   .slider {
     padding: 10px;
   }
-  
+
   .projects-grid {
     gap: 21px;
     cursor: default;
