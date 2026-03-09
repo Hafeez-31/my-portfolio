@@ -48,8 +48,8 @@ const Skills = () => {
 
                 <div className="skills-wrapper">
 
-                    {skillsData.map((skill, index) => (
-                        <div className="skills-item" key={index}>
+                    {skillsData.map((skill) => (
+                        <div className="skills-item" key={skill.name}>
                             <img src={skill.img} alt={skill.name} />
                             <h3>{skill.name}</h3>
                             <p>

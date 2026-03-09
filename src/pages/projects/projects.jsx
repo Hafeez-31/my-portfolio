@@ -42,7 +42,7 @@ const Projects = () => {
     ]
 
     const ecommerceProjects = [
-        { id: productId++, img: urbanBurger, title: "Urban Burger", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/urbanburger/", type: " Ecommerce" },
+        { id: productId++, img: urbanBurger, title: "Urban Burger", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/urbanburger/", type: "Ecommerce" },
     ]
 
     let currentProjects = [];
@@ -88,16 +88,16 @@ const Projects = () => {
                 </div>
 
                 <div className="project-grid">
-                    {currentProjects.slice(0, visibleCount).map((project, index) => (
-                        <div className="project-col" key={index}>
+                    {currentProjects.slice(0, visibleCount).map((project) => (
+                        <div className="project-col" key={project.id}>
 
                             <img src={project.img} alt={project.title} />
 
                             <h2>{project.title}</h2>
 
                             <div className="projects-tech">
-                                {project.tech.map((techItem, index) => (
-                                    <span key={index}>{techItem}</span>
+                                {project.tech.map((techItem, idx) => (
+                                    <span key={idx}>{techItem}</span>
                                 ))}
                             </div>
 
