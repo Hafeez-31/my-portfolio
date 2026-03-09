@@ -15,7 +15,7 @@
 }
 
 .project-text {
-    padding: 80px 20px;
+    padding: 60px 20px 45px;
     background-color: #cbbcbc31;
 }
 
@@ -175,6 +175,13 @@
     .menu button {
         font-size: 16px;
         padding: 6px 14px;
+        background-color: rgba(128, 128, 128, 0.269);
+        color: black;
+    }
+
+    .menu button.active {
+        background-color: rgba(17, 17, 128, 0.828);
+        color: white;
     }
 
     .project-col h2 {
