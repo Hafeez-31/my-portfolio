@@ -1,6 +1,10 @@
 .skills-section {
     padding: 50px 22px 60px;
-    background: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.876)), url(../../assets/images/skills-icons/skillsback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
 }
 
@@ -38,9 +42,9 @@
 
 .skills-card {
     padding: 22px 17px;
-    background-color: white;
-    color: black;
-    border: 2px solid white;
+    background: linear-gradient(rgba(246, 241, 241, 0.878), rgba(169, 167, 167, 0.417));
+    color: #fff;
+    border: 2px solid black;
     opacity: 0;
     transform: translateY(60px);
 }
@@ -101,6 +105,7 @@
 
 .skills-card p {
     margin-top: 12px;
+    font-size: 14px;
 }
 
 .skills-card img {
@@ -112,7 +117,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: black;
     font-size: 20px;
     color: white;
     border: 2px solid white;
@@ -140,7 +144,7 @@
 }
 
 .view-btn:hover {
-    background-color: white;
+    background: linear-gradient(rgba(246, 241, 241, 0.878), rgba(169, 167, 167, 0.201));
     transform: scale(0.95);
 }
 

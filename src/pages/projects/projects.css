@@ -16,7 +16,8 @@
 
 .project-text {
     padding: 60px 20px 45px;
-    background-color: #cbbcbc31;
+    background-image: url(../../assets/images/about/aboutback.jpg);
+    background-position: center;
 }
 
 .project-text h1 {
@@ -59,6 +60,7 @@
     gap: 22px;
     width: 100%;
     max-width: 1220px;
+    margin: 0 auto;
 }
 
 .project-col {

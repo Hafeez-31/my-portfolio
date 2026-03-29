@@ -1,5 +1,7 @@
 .contact-section {
   padding: 0 70px 45px;
+  background-image: url(../../assets/images/about/aboutback.jpg);
+  background-position: center;
 }
 
 .contact-title {

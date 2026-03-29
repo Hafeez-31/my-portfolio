@@ -1,6 +1,6 @@
 .skils-title {
     text-align: center;
-    padding: 170px 0;
+    padding: 140px 0;
     background-color: black;
     color: white;
 }
@@ -16,7 +16,8 @@
 
 .skills-text {
     padding: 80px 20px;
-    background-color: #cbbcbc31;
+    background-image: url(../../assets/images/about/aboutback.jpg);
+    background-position: center;
 }
 
 .skills-word h1 {
@@ -35,7 +36,7 @@
 .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    gap: 20px;
     width: 100%;
     max-width: 1220px;
     justify-content: center;
@@ -43,7 +44,7 @@
 }
 
 .skills-item {
-    padding: 22px 25px;
+    padding: 22px 20px;
     background-color: white;
     color: black;
     border: 2px solid white;
@@ -55,7 +56,7 @@
 }
 
 .skills-item p {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 12px;
 }
 
