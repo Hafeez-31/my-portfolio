@@ -154,16 +154,14 @@
   border-color: black;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .contact-section {
-    padding: 0 13px 50px;
+    padding: 20px 22px 50px;
   }
 
   .contact-title {
     text-align: center;
     font-size: 32px;
-    margin: 45px;
   }
 
   .contact-form {

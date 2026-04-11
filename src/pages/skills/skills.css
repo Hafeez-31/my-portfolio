@@ -1,7 +1,10 @@
 .skils-title {
     text-align: center;
-    padding: 140px 0;
-    background-color: black;
+    padding: 150px;
+    background-image: url(../../assets/images/homeimg/storm.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 

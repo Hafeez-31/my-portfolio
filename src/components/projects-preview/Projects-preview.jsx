@@ -1,22 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Projects-preview.css";
-import ToDo from "../../assets/images/projects/todo.png";
-import Calculator from "../../assets/images/projects/calculator.png";
+import bookTrip from "../../assets/images/projects/bookmytrip.png";
 import ModernFurniture from "../../assets/images/projects/furniture.png";
 import BootsrapLily from "../../assets/images/projects/boostraplily.png";
 import Construct from "../../assets/images/projects/construct.png";
 import Crud from "../../assets/images/projects/crud.png";
 import Consuloan from "../../assets/images/projects/consuloan.png";
+import PolicyNest from "../../assets/images/projects/policynest.png";
+import loginSignup from "../../assets/images/projects/loginandsignup.png";
 
 const originalProjects = [
-  { img: ToDo, title: "ToDo List", tech: ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"], link: "https://crud-todolistapp.netlify.app/" },
-  { img: Calculator, title: "Calculator", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/calculator" },
+  { img: bookTrip, title: "Book my Trip", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/bookmytrip/" },
   { img: ModernFurniture, title: "Modern Furniture", tech: ["HTML", "CSS", "RESPONSIVE DESIGN"], link: "https://hafeez-31.github.io/furniture-website" },
   { img: BootsrapLily, title: "BootstrapLily", tech: ["HTML", "CSS", "UI/UX"], link: "https://hafeez-31.github.io/bootstraplily-website" },
   { img: Construct, title: "Construct", tech: ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"], link: "https://primeconstructor.netlify.app/" },
   { img: Crud, title: "CRUD App", tech: ["HTML", "CSS", "JS"], link: "https://hafeez-31.github.io/crud-application/" },
-  { img: Consuloan, title: "Consuloan", tech: ["HTML", "CSS", "BOOTSTRAP"], link: "https://hafeez-31.github.io/consuloan-website/" }
+  { img: Consuloan, title: "Consuloan", tech: ["HTML", "CSS", "BOOTSTRAP"], link: "https://hafeez-31.github.io/consuloan-website/" },
+  { img: PolicyNest, title: "Policy Nest", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://insurancenest.netlify.app/" },
+  { img: loginSignup, title: "Login and Signup Form", tech: ["HTML", "CSS", "JAVASCRIPT"], link: "https://hafeez-31.github.io/Loginandsignupform/" }
 ];
 
 const visibleCards = 3;
@@ -126,28 +128,23 @@ const Projectspreview = () => {
           onMouseLeave={startAutoSlide}
         >
           {projects.map((p, i) => (
-            <div className="project-cards" key={i}>
-              <img src={p.img} alt={p.title} />
-              <h2>{p.title}</h2>
+            <a href={p.link} target="_blank" rel="noreferrer">
+              <div className="project-cards">
+                <img src={p.img} alt={p.title} />
+                <h2>{p.title}</h2>
 
-              <div className="projects-title">
-                {p.tech.map((t, idx) => (
-                  <span className="tech-box" key={idx}>{t}</span>
-                ))}
-              </div>
+                <div className="projects-title">
+                  {p.tech.map((t, idx) => (
+                    <span className="tech-box" key={idx}>{t}</span>
+                  ))}
+                </div>
 
-              <div className="projects-footer">
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="projects-link"
-                >
-                  SEE PROJECT
-                </a>
-                <span className="projects-type">Personal Project</span>
+                <div className="projects-footer">
+                  <span className="projects-link">SEE PROJECT</span>
+                  <span className="projects-type">Personal Project</span>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

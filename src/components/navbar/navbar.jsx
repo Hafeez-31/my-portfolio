@@ -51,7 +51,9 @@ const Navbar = ({ scrollTo, refs }) => {
             CONTACT
           </li>
 
-          <li className="nav-item mobile-hire">HIRE ME</li>
+          <li className="nav-item mobile-hire" onClick={() => scrollToSection("contact")}>
+            HIRE ME
+          </li>
         </ul>
 
         <div className="hire-btn desktop-only" onClick={() => scrollToSection("contact")}>
