@@ -68,8 +68,7 @@
   background: linear-gradient(to top,
       rgba(255, 255, 255, 0.637) 0%,
       rgba(255, 255, 255, 0.077) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
+      rgba(255, 255, 255, 0) 100%);
   opacity: 0;
   transition: 0.4s ease;
 }
@@ -160,6 +159,7 @@
   font-size: 18px;
   color: black;
   border: 2px solid black;
+  box-shadow: 0 8px 30px rgba(20, 20, 19, 0.404), 0 0 20px rgba(13, 13, 14, 0.047);
   padding: 10px 10px;
   margin: 35px auto 0;
   cursor: pointer;
@@ -257,5 +257,14 @@
 
   .projects-link {
     color: black;
+  }
+
+  .project-btn:hover {
+    transform: none;
+  }
+
+  .project-btn:hover .line {
+    width: 25px;
+    transition: none;
   }
 }

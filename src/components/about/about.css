@@ -27,7 +27,7 @@
 }
 
 .about-line {
-    width: 120px;
+    width: 195px;
     display: block;
     margin-bottom: 35px;
     height: 4px;
@@ -48,10 +48,12 @@
     align-items: center;
     padding: 12px 13px;
     margin-left: 11px;
-    gap: 12px;
+    gap: 5px;
     border: 2px solid black;
     border-radius: 2px;
     color: black;
+    background-color: #ffffff56;
+    box-shadow: 0 8px 30px rgba(20, 20, 19, 0.404), 0 0 20px rgba(13, 13, 14, 0.047);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -71,8 +73,10 @@
 }
 
 .about-btn:hover {
-    background: black;
-    transform: scale(0.95);
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.352) 40%,
+      rgba(0, 0, 0, 0.938) 100%);
+    transform: scale(0.98);
 }
 
 .about-btn:hover a {
@@ -210,7 +214,6 @@
 
     .about-content {
         padding: 20px 5px;
-        text-align: center;
     }
 
     .about-content h2 {
@@ -218,8 +221,7 @@
     }
 
     .about-line {
-        margin: 15px auto 25px;
-        width: 80px;
+        width: 125px;
     }
 
     .about-content p {
@@ -228,13 +230,13 @@
     }
 
     .about-btn {
-        margin: 10px 31%;
-        font-size: 10px;
+        font-size: 16px;
         padding: 10px 12px;
+        margin: 0;
     }
 
     .about-btn .line {
-        width: 18px;
+        width: 22px;
     }
 
     .about-btn a {

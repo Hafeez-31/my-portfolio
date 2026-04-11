@@ -89,8 +89,7 @@
     background: linear-gradient(to top,
             rgba(255, 255, 255, 0.637) 0%,
             rgba(255, 255, 255, 0.077) 40%,
-            rgba(255, 255, 255, 0) 100%
-        );
+            rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     transition: 0.4s ease;
 }
@@ -185,18 +184,20 @@
 .view-more {
     padding: 10px 25px;
     font-size: 16px;
-    background-color: #fff;
+    background-color: #ffffff56;
     color: black;
     border: 2px solid black;
-    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(20, 20, 19, 0.404), 0 0 20px rgba(13, 13, 14, 0.047);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .view-more:hover {
-    background-color: black;
-    color: #fff;
-    transform: scale(0.90);
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.352) 40%,
+            rgba(0, 0, 0, 0.938) 100%);
+    color: white;
+    transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
@@ -232,6 +233,10 @@
     .menu button {
         font-size: 14px;
         padding: 6px 12px;
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        color: black
     }
 
     .project-grid {
@@ -245,11 +250,11 @@
         max-width: 340px;
         margin: 0 auto;
         overflow: hidden;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
 
     .project-col img {
-        height: fit-content;
+        height: 220px;
         width: 100%;
     }
 
@@ -268,6 +273,7 @@
         flex-wrap: wrap;
         padding: 10px 22px;
     }
+
     .project-footers {
         flex-direction: row;
         gap: 8px;
@@ -279,7 +285,7 @@
         color: black;
     }
 
-    .view-more {
-        width: 80%;
+    .view-more:hover {
+        transform: none;
     }
 }
