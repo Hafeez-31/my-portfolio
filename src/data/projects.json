@@ -1,0 +1,130 @@
+[
+  {
+    "img": "/images/projects/studentadmin.png",
+    "title": "Student Admin Panel",
+    "tech": ["REACT JS", "RESPONSIVE DESIGN"],
+    "link": "https://studentadmin-panel.netlify.app/",
+    "type": "Admin Panel",
+    "category": "admipanel"
+  },
+  {
+    "img": "/images/projects/studentsystem.png",
+    "title": "Student System Management",
+    "tech": ["REACT JS", "JAVA", "MYSQL"],
+    "link": "https://student-systemmanagement.netlify.app/",
+    "type": "Full Stack",
+    "category": "fullstack"
+  },
+  {
+    "img": "/images/projects/urbanburger.png",
+    "title": "Urban Burger",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/urbanburger/",
+    "type": "Ecommerce",
+    "category": "ecommerce"
+  },
+  {
+    "img": "/images/projects/loginandsignup.png",
+    "title": "Login and Signup Form",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/Loginandsignupform/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/bookmytrip.png",
+    "title": "Book my Trip",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/bookmytrip/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/policynest.png",
+    "title": "Policy Nest",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://insurancenest.netlify.app/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/todo.png",
+    "title": "ToDo List",
+    "tech": ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"],
+    "link": "https://crud-todolistapp.netlify.app/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/crud.png",
+    "title": "CRUD App",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/crud-application/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/construct.png",
+    "title": "Construction",
+    "tech": ["UI & UX", "REACT JS", "RESPONSIVE DESIGN"],
+    "link": "https://primeconstructor.netlify.app/",
+    "type": "Landing Pages",
+    "category": "landing"
+  },
+  {
+    "img": "/images/projects/furniture.png",
+    "title": "Modern Furniture",
+    "tech": ["HTML", "CSS", "RESPONSIVE DESIGN"],
+    "link": "https://hafeez-31.github.io/furniture-website",
+    "type": "Landing Pages",
+    "category": "landing"
+  },
+  {
+    "img": "/images/projects/boostraplily.png",
+    "title": "BootstrapLily",
+    "tech": ["HTML", "CSS", "UI/UX"],
+    "link": "https://hafeez-31.github.io/bootstraplily-website",
+    "type": "Landing Pages",
+    "category": "landing"
+  },
+  {
+    "img": "/images/projects/consuloan.png",
+    "title": "Consuloan",
+    "tech": ["HTML", "CSS", "BOOTSTRAP"],
+    "link": "https://hafeez-31.github.io/consuloan-website/",
+    "type": "Landing Pages",
+    "category": "landing"
+  },
+  {
+    "img": "/images/projects/marine.png",
+    "title": "Marine Cargo",
+    "tech": ["HTML", "CSS", "RESPONSIVE DESIGN"],
+    "link": "https://hafeez-31.github.io/marinecargo/",
+    "type": "Landing Pages",
+    "category": "landing"
+  },
+  {
+    "img": "/images/projects/calculator.png",
+    "title": "Calculator",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/calculator/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/clock.png",
+    "title": "Analog Clock",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/analog-clock/",
+    "type": "Own Project",
+    "category": "own"
+  },
+  {
+    "img": "/images/projects/currency.png",
+    "title": "Live Currency Converter",
+    "tech": ["HTML", "CSS", "JAVASCRIPT"],
+    "link": "https://hafeez-31.github.io/currencyconverter/",
+    "type": "Own Project",
+    "category": "own"
+  }
+]

@@ -26,7 +26,7 @@ const Footer = ({ scrollTo, refs }) => {
     return (
         <footer className="footer">
             <div className="footer-main">
-                <h1 className="footer-name">Hafeez Ahamed. Z</h1>
+                <h1 className="footer-name">Hafeez <span>Ahamed</span></h1>
 
                 <ul className="footer-menu">
                     <li className="footer-item" onClick={() => scrollToSection("home")}>HOME</li>
@@ -35,7 +35,7 @@ const Footer = ({ scrollTo, refs }) => {
                     <li className="footer-item"><Link to="/projects">PROJECTS</Link></li>
                     <li className="footer-item" onClick={() => scrollToSection("contact")}>CONTACT</li>
                 </ul>
-                <span className="footer-line"></span>
+                <span className="footer-line"><span></span></span>
                 <div className="footer-socials">
                     <a href="http://linkedin.com/in/hafeez-ahamed-69473427a" className="social-link linkedin" target="_blank" rel="noreferrer">
                         <FaLinkedin />

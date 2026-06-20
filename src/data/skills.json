@@ -1,0 +1,98 @@
+[
+  {
+    "img": "/images/skills-icons/html-logo.png",
+    "name": "HTML 5",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/css-logo.png",
+    "name": "CSS 3",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/js-logo.png",
+    "name": "JAVASCRIPT",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/reactjs-logo.png",
+    "name": "REACT JS",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/bootstrap-logo.png",
+    "name": "BOOTSTRAP",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/java-logo.png",
+    "name": "JAVA",
+    "experience": "1+",
+    "level": "Beginner"
+  },
+  {
+    "img": "/images/skills-icons/mysql-logo.png",
+    "name": "MY SQL",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/redux-logo.png",
+    "name": "REDUX",
+    "experience": "1+",
+    "level": "Beginner"
+  },
+  {
+    "img": "/images/skills-icons/ag-grid-logo.png",
+    "name": "AG-GRID",
+    "experience": "1+",
+    "level": "Beginner"
+  },
+  {
+    "img": "/images/skills-icons/nodejs-logo.png",
+    "name": "NODE JS",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/git-logo.png",
+    "name": "GIT",
+    "experience": "1+",
+    "level": "Beginner"
+  },
+  {
+    "img": "/images/skills-icons/github-logo.png",
+    "name": "GIT HUB",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/canva-logo.jpeg",
+    "name": "CANVA",
+    "experience": "1+",
+    "level": "Beginner"
+  },
+  {
+    "img": "/images/skills-icons/msword-logo.png",
+    "name": "MS WORD",
+    "experience": "1+",
+    "level": "Advanced"
+  },
+  {
+    "img": "/images/skills-icons/powerpoint-logo.png",
+    "name": "POWER POINT",
+    "experience": "1+",
+    "level": "Intermediate"
+  },
+  {
+    "img": "/images/skills-icons/msexcel-logo.png",
+    "name": "MS EXCEL",
+    "experience": "1+",
+    "level": "Advanced"
+  }
+]

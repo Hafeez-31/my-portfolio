@@ -1,0 +1,27 @@
+body,
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+  .nav-item,
+  .nav-item a,
+  .hamburger,
+  .close-btn,
+  .hire-btn,
+  .mobile-hire {
+    cursor: default !important;
+  }
+}

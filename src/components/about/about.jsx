@@ -1,92 +1,73 @@
-import React, { forwardRef, useState, useRef, useEffect } from "react";
+import React, { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import { FaGraduationCap } from "react-icons/fa";
-import './about.css'
-import systemImage from "../../assets/images/system/system.jpg"
-import myResume from "../../assets/My-resume/Hafeezahamed-Resume.pdf"
+import "./about.css";
 
-const About = forwardRef((_, ref) => {
+import systemImage from "../../assets/images/system/system.jpg";
+import myResume from "../../assets/My-resume/Hafeezahamed-Resume.pdf";
 
-    const h2Ref = useRef();
-    const pRef = useRef();
-    const qualRef = useRef();
-
-    const [h2Visible, setH2Visible] = useState(false);
-    const [pVisible, setPVisible] = useState(false);
-    const [qualVisible, setQualVisible] = useState(false);
-
+const About = forwardRef((props, ref) => {
     const qualifications = [
-        { title: "QUALIFICATION", content: "I have Graduated in B.Sc Computer Science on 2023 at University of Madras, scoring 85%" },
-        { title: "CERTIFICATION", content: "I have learned FullStack Developer course at AJR Institute, completing the Front-End part with hands-on project experience." },
-        { title: "EXPERIENCE", content: "Currently working as a Ticketing Executive with 1+ years of experience and transitioning into the IT field as a web UI developer." }
+        {
+            title: "Qualification",
+            content:
+                "Graduated with B.Sc Computer Science from the University of Madras in 2023, achieving 85% and developing a strong foundation in programming and software development."
+        },
+        {
+            title: "Certification",
+            content:
+                "Certified in Java Full Stack Development from AJR Institute, gaining hands-on project experience in Front-End and Back-End development."
+        },
+        {
+            title: "Experience",
+            content:
+                "Currently working as a Ticketing Executive while developing expertise in Front-End Development through hands-on projects and continuous learning."
+        },
     ];
 
-    useEffect(() => {
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-
-                if (entry.target === h2Ref.current && entry.isIntersecting) {
-                    setH2Visible(true);
-                }
-
-                if (entry.target === pRef.current && entry.isIntersecting) {
-                    setPVisible(true);
-                }
-
-                if (entry.target === qualRef.current && entry.isIntersecting) {
-                    setQualVisible(true);
-                }
-
-            });
-        }, { threshold: 0.3 });
-
-        observer.observe(h2Ref.current);
-        observer.observe(pRef.current);
-        observer.observe(qualRef.current);
-
-        return () => observer.disconnect();
-
-    }, []);
-
     return (
-        <div ref={ref} className="about-section">
+        <section ref={ref} className="about-section">
             <div className="about-left">
                 <div className="about-content">
-                    <h2 ref={h2Ref} className={`fade-in-left ${h2Visible ? "visible" : ""}`}>About Me</h2>
-                    <span className="about-line"></span>
-                    <p ref={pRef} className={`fade-in-left ${pVisible ? "visible" : ""}`}>
-                        I am an entry-level Front-End Developer, Passed out in 2023, with a strong interest in building responsive and
-                        user-friendly web applications. I enjoy transforming ideas into clean and functional designs using modern
-                        web technologies. I have hands-on experience through personal and academic projects, focusing on HTML, CSS, JavaScript,
-                        React.js, Bootstrap, and modern frameworks. I am highly motivated to learn, grow, and contribute to real-world projects
-                        in a collaborative development environment.
+                    <h2>About Me</h2>
+
+                    <div className="title-line"></div>
+
+                    <p>
+                        Passionate Front-End Developer focused on building responsive, user-friendly, and modern
+                        web applications using <strong>{" "}React.js, JavaScript, HTML5, CSS3, Bootstrap, MySQL,
+                            and Core Java.</strong> I enjoy creating clean interfaces and delivering seamless user experiences.
+                        Through hands-on projects and continuous learning, I have developed practical experience in
+                        modern web development and problem-solving. I am eager to apply my skills, grow as a developer,
+                        and contribute to impactful web applications.
                     </p>
+
+
+                    <a
+                        href={myResume}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="resume-btn"
+                    >
+                        Download CV
+                    </a>
                 </div>
 
-                <div className="about-btn">
-                    <span className="line"></span>
-                    <a href={myResume}>DOWNLOAD CV</a>
-                </div>
-
-                <span className="hr-line"></span>
-
-                <div ref={qualRef} className="about-qualifications">
-                    {qualifications.map((item, idx) => (
-                        <div key={idx} className={`qualification-cards ${qualVisible ? "visible" : ""}`}>
-                            <div className="qualification-header">
+                <div className="about-cards">
+                    {qualifications.map((item, index) => (
+                        <div className="about-card" key={index}>
+                            <div className="card-header">
                                 <h3>{item.title}</h3>
-                                <FaGraduationCap className="qualification-icon" />
+                                <FaGraduationCap />
                             </div>
+
                             <p>{item.content}</p>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className={`about-right ${pVisible ? "visible" : ""}`}>
-                <img className="about-img" src={systemImage} alt="System" />
-            </div>
-        </div>
-    )
+        </section>
+    );
 });
 
 export default About;
