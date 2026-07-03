@@ -8,6 +8,14 @@
     "category": "admipanel"
   },
   {
+    "img": "/images/projects/royalgrocery.png",
+    "title": "Royal Grocery",
+    "tech": ["REACT JS", "RESPONSIVE DESIGN"],
+    "link": "https://royalgrocery.netlify.app/",
+    "type": "Ecommerce",
+    "category": "ecommerce"
+  },
+  {
     "img": "/images/projects/studentsystem.png",
     "title": "Student System Management",
     "tech": ["REACT JS", "JAVA", "MYSQL"],
